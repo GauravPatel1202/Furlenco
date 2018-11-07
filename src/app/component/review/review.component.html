@@ -1,0 +1,149 @@
+<div class="container _listRestaimage _rvContainer" >
+	<img src="{{restaurantReviews.featured_image}}" class="_rvContainer_img">
+</div>
+<div class="container _listResta" >
+	<ul id="buttons" class="_center" >
+		<li>
+			<div class="row">
+				<div class="columnTwo">
+					<div class="line_height30">
+						<div>
+							<p class="HeaderLine">{{restaurantReviews.name}}</p>
+							<span class="float_right">
+								<input type="buttons" class="btn btn-default btmShare" name="share" value="share">
+							</span>
+						</div>
+					</div>
+						<div class="line_height30">
+							<div>
+								<span class="fa fa-star checked starClass"></span>
+								<span>{{restaurantReviews.user_rating.aggregate_rating}} 
+									
+										
+									<span>({{restaurantReviews.user_rating.votes}} Votes)</span>
+								</span>
+								<span class="starline">|</span>
+								<span> {{reviewsCount.reviews_count}} Review</span>
+							</div>
+						</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<ul id="buttons" class="_center" >
+		<li>
+			<div class="row">
+				<div class="columnTwo">
+					<div class="line_height30">
+						<div class="HeaderLineInner">Cost of 2</div>
+					</div>
+					<div class="line_height30">
+						<div> {{restaurantReviews.currency}}{{restaurantReviews.average_cost_for_two}}</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="columnTwo">
+					<div class="line_height30">
+						<div class="HeaderLineInner">Address</div>
+					</div>
+					<div class="line_height30">
+						<div>
+							<P>{{restaurantReviews.location.address}}<br>{{restaurantReviews.location.locality}} - {{restaurantReviews.location.zipcode}}</P>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<ul id="buttons" class="_center" >
+		<li>
+			<div class="row">
+				<div class="columnTwo">
+					<div class="line_height30">
+						<div class="HeaderLine">Photos</div>
+					</div>
+					<div class="row">
+						<div class="column">
+							<img src="{{restaurantReviews.thumb}}" alt="Snow" class="Photos_img">
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<ul id="buttons" class="_center" >
+		<li>
+			<div class="row">
+				<div class="columnTwo">
+					<div class="row">
+						<div class="col-md-3 line_height30">
+							<div class="HeaderLine">Menu</div>
+						</div>
+						<div class="col-md-9 line_height30" >
+							<div *ngFor="let menu of dailymenuData">
+								<div>
+									<div class="clearfix">
+										<div class="item">
+											<div class="clearfix ">
+												<div class="list col-s-16  ">
+													<div class="item col-s-16">
+														<div clasee="MenuClass">
+															<div class="HeaderLine">{{menu.daily_menu.name}}</div>
+															<div *ngFor="let menuSub of menu.daily_menu.dishes">
+																<h6 class="menuList">{{menuSub.dish.name}}</h6>
+															</div>
+														</div>
+														<div class="clear"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<ul id="buttons" class="_center" >
+		<li>
+			<div class="row">
+				<div class="columnTwo">
+					<div class="line_height30">
+						<div class="HeaderLine">Ratings</div>
+					</div>
+					<div class="line_height30" *ngFor="let reviewss of getreviews">
+						<div class="clearfix">
+				        	<div class="item ratingClass">
+								<div class="clearfix">
+									<div class="list col-s-16  ">
+										<div class="item col-s-16">
+											<img alt="{{reviewss.review.user.name}}" src="{{reviewss.review.user.profile_image}}" data-original="https://b.zmtcdn.com/data/user_profile_pictures/cf3/e1fbf8a6844451eec1f512abcdcc4cf3.jpg?fit=around%7C100%3A100&amp;crop=100%3A100%3B%2A%2C%2A" class="reviewer_img" >
+												<div class="reivewStar">
+													<div class="HeaderLine">{{reviewss.review.user.name}}</div>
+													<span class="fa fa-star _RatestarClass" [ngClass]="{'checked': 1<=reviewss.review.rating}">
+													</span>
+													<span class="fa fa-star _RatestarClass" [ngClass]="{'checked': 2<=reviewss.review.rating}">
+													</span>
+													<span class="fa fa-star _RatestarClass" [ngClass]="{'checked': 3<=reviewss.review.rating}">
+													</span>
+													<span class="fa fa-star _RatestarClass" [ngClass]="{'checked': 4<=reviewss.review.rating}">
+													</span>
+													<span class="fa fa-star _RatestarClass" [ngClass]="{'checked': 5<=reviewss.review.rating}">
+													</span>
+													<div> {{reviewss.review.review_text}}</div>
+												</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>

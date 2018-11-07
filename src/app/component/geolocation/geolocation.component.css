@@ -1,0 +1,49 @@
+#buttons li {
+  list-style: none;
+  text-align: center;
+  background-color: #D8D8D8;
+  margin-right: 30px;
+  width: 200px;
+  border-radius: 30px;
+  margin: 30px 0px;
+  line-height: 50px;
+  border: 2px solid #c4c2c2;
+}
+
+#buttons li a {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: block;
+  font-size: 17px;
+  font-weight: 400;
+  width: 200px;
+  border-radius: 30px;
+  line-height: 50px;
+}
+
+#buttons li a:hover {
+  color: #000000;
+  background-color: #33B5E5;
+}
+
+._center {
+  align-self: center;
+  margin: auto;
+  width: 201px;
+  padding: 10px;
+}
+
+.selectCity {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 24px;
+    color: #c4c2c2;
+}
+
+ul li:first-child {
+  margin: 0px 0px 30px 0px !important;
+}
+
+ul li:last-child {
+  margin: 0px 0px 30px 0px !important;
+}

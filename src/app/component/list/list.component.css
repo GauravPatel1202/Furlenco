@@ -1,0 +1,90 @@
+._listResta {
+  background: #fff;
+  border-left: 2px solid;
+  border-right: 2px solid;
+  border-bottom: 1px solid;
+  min-height: fit-content;
+  margin-top: 50PX;
+  color: #a9a5a5
+}
+
+ul {
+  padding: 0px 30px;
+}
+
+#buttons li {
+  list-style: none;
+  margin-right: 30px;
+  width: 100%;
+  margin: 30px 0px;
+  line-height: 150px;
+  border-bottom: 3px solid #f5f5f5;
+}
+
+ul li:first-child {
+  margin: 0px 0px 30px 0px !important;
+}
+
+#buttons li:first-child {
+  border-bottom: 0px solid #f5f5f5;
+}
+
+ul li:last-child {
+  margin: 0px 0px 30px 0px !important;
+}
+
+.columnOne {
+ width: 261px;
+padding: 5px;
+  border-radius: 5px;
+  background: gainsboro;
+  float: left;
+}
+
+.columnTwo {
+  width: 70%;
+  padding: 5px 10px 5px 25px;
+  vertical-align: top;
+  float: left;
+}
+
+.row {
+  margin: 30px 0px;
+}
+
+.columnheading {
+  width: 100%;
+  padding: 5px;
+  vertical-align: top;
+  float: left;
+}
+
+.rowheading {
+  margin: 30px 0px 0px 0px;
+}
+
+._lsitlocation {
+  font-weight: 800;
+  color: #5d5c5cd9;
+}
+
+._location {
+  line-height: 50px;
+}
+
+.colLineheight {
+  line-height: 30px;
+}
+
+.list_img {
+     width: 100%;
+}
+.row{
+  cursor: pointer;
+}
+.starClass{
+      margin: 10px 10px 10px 0px;
+}
+.starline{
+      margin: 0px 11px;
+}

@@ -1,0 +1,37 @@
+<div class="container _listResta">
+	<ul id="buttons" class="_center" >
+		<li>
+			<div class="rowheading">
+				<div class="columnheading">
+					<div class="_location">
+						<div>Showing Restaurant in 
+							<span class="_lsitlocation">{{dataLoaction.title}}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li *ngFor="let restaurant of restaurantslist" (click)="btnClick(restaurant)">
+			<div class="row">
+				<div class="columnOne">
+					<img src="{{restaurant.restaurant.featured_image}}" alt="Snow" class="list_img">
+					</div>
+					<div class="columnTwo">
+						<div class="colLineheight">
+							<div>{{restaurant.restaurant.name}}</div>
+						</div>
+						<div class="colLineheight">
+							<div>
+								<span class="fa fa-star checked starClass"></span>
+								<span>{{restaurant.restaurant.user_rating.aggregate_rating}}
+									<span>({{restaurant.restaurant.user_rating.votes}} Votes)</span>
+								</span>
+								<span class="starline">|</span>
+								<span> 233 Review</span>
+							</div>
+						</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
